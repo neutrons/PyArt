@@ -1,0 +1,7 @@
+typing_extensions
+uncertainties
+scipy>=0.18
+qtpy
+h5py
+vtk
+mantid-workbench<=5.2

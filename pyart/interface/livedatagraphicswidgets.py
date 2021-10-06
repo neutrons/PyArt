@@ -1,10 +1,10 @@
 # Zoo of graphics view widgets for "Live Data"
 import numpy
 
-from pyvdrive.interface.gui.mplgraphicsview import MplGraphicsView
-from pyvdrive.interface.gui.mplgraphicsview1d import MplGraphicsView1D
-from pyvdrive.interface.gui.mplgraphicsview2d import MplGraphicsView2D
-from pyvdrive.core import datatypeutility
+from pyart.interface.mplgraphicsview import MplGraphicsView
+from pyart.interface.mplgraphicsview1d import MplGraphicsView1D
+from pyart.interface.mplgraphicsview2d import MplGraphicsView2D
+from pyart.model import datatypeutility
 
 
 class GeneralPurpose1DView(MplGraphicsView1D):

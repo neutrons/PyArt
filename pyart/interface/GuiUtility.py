@@ -2,23 +2,18 @@ import time
 import datetime
 import numpy
 import platform
-try:
-    import qtconsole.inprocess  # noqa: F401
-    from PyQt5 import QtCore
-    from PyQt5.QtWidgets import QLineEdit, QMessageBox, QTableWidgetItem, QCheckBox, QWidget, QHBoxLayout, QFileDialog
-    from PyQt5.QtWidgets import QComboBox
-    from PyQt5.QtGui import QStandardItemModel, QStandardItem
-except ImportError:
-    from PyQt4 import QtCore
-    from PyQt4.QtGui import QStandardItemModel, QStandardItem, QLineEdit, QMessageBox, QFileDialog  # noqa: F401
-    from PyQt4.QtGui import QTableWidgetItem, QCheckBox, QWidget, QHBoxLayout, QComboBox
+import qtconsole.inprocess  # noqa: F401
+from qtpy import QtCore
+from qtpy.QtWidgets import QLineEdit, QMessageBox, QTableWidgetItem, QCheckBox, QWidget, QHBoxLayout, QFileDialog
+from qtpy.QtWidgets import QComboBox
+from qtpy.QtGui import QStandardItemModel, QStandardItem
 # include this try/except block to remap QString needed when using IPython
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
     _fromUtf8 = lambda s: s  # noqa: E731
 
-from pyvdrive.core import datatypeutility
+from pyart.model import datatypeutility
 
 
 def add_runs_to_tree(treewidget, ipts, runlist):

@@ -8,8 +8,8 @@ import mantid.dataobjects
 import mantid.geometry
 import mantid.simpleapi as mantidapi
 from mantid.api import AnalysisDataService as ADS
-from pyvdrive.core import vdrivehelper
-from pyvdrive.core import datatypeutility
+# from pyvdrive.core import vdrivehelper
+from pyart.model import datatypeutility
 import datetime
 
 EVENT_WORKSPACE_ID = "EventWorkspace"

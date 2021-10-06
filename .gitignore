@@ -101,6 +101,9 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+# Temp file
+.*.swp
+
 # Environments
 .env
 .venv
@@ -127,3 +130,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# To ignore
+*.swp
+.*.swp

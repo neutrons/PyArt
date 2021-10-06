@@ -1,14 +1,10 @@
 # iPython widgets including a ipython console, a workspace table and a figure canvas
 # This QMainWindow is implemented in order to use WorkspaceViewWidget, which contains
 # IPython console, table view and figure inside, while it cannot be called directly
-try:
-    import qtconsole.inprocess  # noqa: F401
-    from PyQt5.QtWidgets import QMainWindow, QWidget, QGridLayout, QSizePolicy, QLabel, QMenuBar, QStatusBar, QToolBar
-    from PyQt5 import QtCore
-except ImportError:
-    from PyQt4.QtGui import QMainWindow, QWidget, QGridLayout, QSizePolicy, QLabel, QMenuBar, QStatusBar, QToolBar
-    from PyQt4 import QtCore
-from pyvdrive.interface.gui.workspaceviewwidget import WorkspaceViewWidget
+import qtconsole.inprocess  # noqa: F401
+from qtpy.QtWidgets import QMainWindow, QWidget, QGridLayout, QSizePolicy, QLabel, QMenuBar, QStatusBar, QToolBar
+from qtpy import QtCore
+from pyart.interface.workspaceviewwidget import WorkspaceViewWidget
 
 # include this try/except block to remap QString needed when using IPython
 try:

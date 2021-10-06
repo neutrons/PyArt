@@ -16,11 +16,11 @@ from pyart.interface.livedatagraphicswidgets import SingleBankView
 from pyart.interface.livedatagraphicswidgets import GeneralPurpose1DView
 from pyart.interface.livedatagraphicswidgets import Live2DView
 from pyart.interface import GuiUtility
-from pyart.interface import IPythonWorkspaceViewer
+from pyart.interface.pvipythonwidget import IPythonWorkspaceViewer
 
 import pyart.model.LiveDataDriver as ld
 import pyart.model.optimize_utilities as optimize_utilities
-from pyart.model import vdrivehelper
+# from pyart.model import vdrivehelper
 from pyart.model import mantid_helper
 from pyart.model import datatypeutility
 
@@ -58,7 +58,7 @@ class VulcanLiveDataView(QMainWindow):
         super(VulcanLiveDataView, self).__init__(parent)
 
         # configuration
-        self._myConfiguration = parent.configuration
+        # self._myConfiguration = parent.configuration
 
         # get hold of controller/driver
         if live_driver is None:
@@ -658,7 +658,9 @@ class VulcanLiveDataView(QMainWindow):
         self._snap_shot_thread.start()
 
         # start start listener
-        self._controller.run()
+        # FIXME - suppose to run here!
+        # self._controller.run()
+        print('ERROR... SUPPOSED TO RUN LIVE REDUCTION HERE')
 
         # edit the states
         self.set_info(VulcanLiveDataView.IN_COLLECTION_MESSAGE, append=True,

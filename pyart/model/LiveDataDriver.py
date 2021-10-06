@@ -3,9 +3,9 @@ import numpy  # type: ignore
 import mantid.simpleapi as mantidsimple  # type: ignore
 from mantid.api import AlgorithmManager  # type: ignore
 from mantid.api import AnalysisDataService as ADS  # type: ignore
-from pyvdrive.core import mantid_helper
-from pyvdrive.core import peak_util
-from pyvdrive.core import archivemanager
+from pyart.model import mantid_helper
+from pyart.model import peak_util
+from pyart.model import archivemanager
 import qtpy
 print(f'...... qtpy: {qtpy}')
 from qtpy import QtCore

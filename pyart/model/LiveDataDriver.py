@@ -666,12 +666,15 @@ class LiveDataDriver(QtCore.QThread):
         print('[DB...BAT] reduction script: {}'.format(self._live_reduction_script))
         # Test for script: whatever has all the log information...
         # and output_1, output_2 will do good still
-        mantidsimple.StartLiveData(UpdateEvery=10,
-                                   Instrument='VULCAN',
+        from mantid.kernel import config
+        print(f'[INFO] Facility = {config.getFacility().name()}')
+        mantidsimple.StartLiveData(UpdateEvery=30,
+                                   Instrument='NOMAD',
                                    Listener='SNSLiveEventDataListener',
-                                   Address='bl7-daq1.sns.gov:31415',
+                                   Address='bl1b-daq1.sns.gov:31415',
                                    StartTime='1990-01-01T00:00:00',
-                                   ProcessingScriptFilename=self._live_reduction_script,
+                                   ProcessingScript="print('---------- new 30 second:', input.__class__.__name__, input.getNumberEvents())",
+                                   # ProcessingScriptFilename=self._live_reduction_script,
                                    PreserveEvents=False,
                                    AccumulationMethod='Add',
                                    RunTransitionBehavior='Rename',

@@ -659,8 +659,8 @@ class VulcanLiveDataView(QMainWindow):
 
         # start start listener
         # FIXME - suppose to run here!
-        # self._controller.run()
-        print('ERROR... SUPPOSED TO RUN LIVE REDUCTION HERE')
+        # print('ERROR... SUPPOSED TO RUN LIVE REDUCTION HERE')
+        self._controller.run()
 
         # edit the states
         self.set_info(VulcanLiveDataView.IN_COLLECTION_MESSAGE, append=True,

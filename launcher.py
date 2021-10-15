@@ -5,7 +5,6 @@ from qtpy.QtWidgets import QDialog, QApplication  # type: ignore
 from qtpy.uic import loadUi as load_ui  # type: ignore
 
 # from pyvdrive.interface.gui import ui_LaunchManager
-from   pyart.interface.VDrivePlot import VdriveMainWindow
 import pyart.interface.LiveDataView
 # import pyart.interface.PeakPickWindow as PeakPickWindow
 # import pyart.interface.ExperimentRecordView as ev
